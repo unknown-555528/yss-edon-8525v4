@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Wholesale Fast Bill Pro</title>
+<meta name="theme-color" content="#07111f">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<style>
+  :root {
+    --primary: #38bdf8;
+    --primary-glow: rgba(56, 189, 248, 0.28);
+    --accent: #34d399;
+    --accent-glow: rgba(52, 211, 153, 0.25);
+    --danger: #fb7185;
+    --bg: #050c18;
+    --card: rgba(14, 27, 45, 0.92);
+    --card-solid: #0f1d30;
+    --border: rgba(86, 134, 182, 0.26);
+    --text: #f0f7ff;
+    --muted: #8ea6c2;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0 auto;
+    max-width: 860px;
+    min-height: 100vh;
+    padding: 16px 14px 40px;
+    background:
+      radial-gradient(ellipse at 12% 0%, rgba(56, 189, 248, 0.16), transparent 38%),
+      radial-gradient(ellipse at 88% 12%, rgba(52, 211, 153, 0.12), transparent 34%),
+      radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.12), transparent 40%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+  }
+
+  /* FUTURISTIC CARDS & HEADER */
+  .card {
+    background: linear-gradient(155deg, rgba(19, 35, 58, 0.96), rgba(11, 22, 37, 0.96));
+    padding: 16px;
+    border-radius: 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .card:focus-within {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(56, 189, 248, 0.2);
+  }
+
+  .header-bar {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #0d2744, #12213b 65%, #192447);
+    color: #fff;
+    padding: 16px 18px;
+    border-radius: 18px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(56, 189, 248, 0.32);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.36), inset 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .header-bar::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: 8%;
+    top: -145px;
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 50%;
+    box-shadow: 0 0 0 18px rgba(56, 189, 248, 0.04), 0 0 0 38px rgba(56, 189, 248, 0.025);
+    pointer-events: none;
+  }
+  .header-bar > div, .header-bar > button { position: relative; z-index: 1; }
+  .header-title { font-size: 18px; font-weight: 800; letter-spacing: 0.7px; color: #f2fbff; }
+  .header-sub { font-size: 11.5px; color: #9ec5e2; margin-top: 3px; display: flex; align-items: center; gap: 6px; }
+  .autosave-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #34d399; box-shadow: 0 0 8px #34d399; display: inline-block;
+  }
+
+  h3 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 800;
+    color: #eaf4ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .row { display: flex; gap: 8px; margin-bottom: 10px; align-items: flex-end; }
+  .col { flex: 1; min-width: 0; }
+  label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #9eb4ca;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1.5px solid #283e58;
+    border-radius: 11px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    background: #081321;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  input::placeholder, textarea::placeholder { color: #698099; opacity: 1; }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16);
+  }
+
+  button {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 11px;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.08s ease, filter 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+  }
+  button:hover { filter: brightness(1.05); }
+  button:active { transform: scale(0.97); }
+
+  .btn-blue {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: #04111f;
+    font-weight: 800;
+    box-shadow: 0 5px 16px rgba(37, 99, 235, 0.28);
+  }
+  .btn-green {
+    background: linear-gradient(135deg, #34d399, #059669);
+    color: #031814;
+    font-size: 16.5px;
+    font-weight: 800;
+    padding: 14px;
+    box-shadow: 0 7px 22px rgba(16, 185, 129, 0.26);
+  }
+  .btn-header {
+    background: rgba(56, 189, 248, 0.14);
+    color: #e0f4ff;
+    border: 1px solid rgba(56, 189, 248, 0.38);
+    font-size: 12.5px;
+    padding: 8px 12px;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .btn-gray {
+    background: #1a2d44;
+    color: #d7e8f7;
+    border: 1px solid #2c4563;
+    font-size: 12px;
+    padding: 7px 11px;
+    width: auto;
+    min-height: 36px;
+  }
+  .btn-cyan-sm {
+    background: rgba(56, 189, 248, 0.15);
+    color: #7dd3fc;
+    border: 1px solid rgba(56, 189, 248, 0.38);
+    font-size: 12px;
+    padding: 7px 11px;
+    width: auto;
+    min-height: 36px;
+  }
+  .btn-outline {
+    background: #112236;
+    color: #dceafa;
+    border: 1px solid #2d4561;
+    font-size: 12.5px;
+    padding: 9px 10px;
+    min-height: 40px;
+  }
+  .btn-red {
+    background: rgba(251, 113, 133, 0.14);
+    color: #fda4af;
+    border: 1px solid rgba(251, 113, 133, 0.28);
+    padding: 5px 10px;
+    font-size: 13.5px;
+    font-weight: 800;
+    width: auto;
+    min-height: 34px;
+    border-radius: 8px;
+  }
+
+  /* 2-COLUMN LIVE SEARCH DROPDOWN */
+  .search-wrapper { position: relative; }
+  .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 32px;
+    background: #1f344d;
+    border: none;
+    color: #d9eafa;
+    width: 26px;
+    height: 26px;
+    min-height: 26px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .suggestions-grid {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+    max-height: min(270px, 42vh);
+    overflow-y: auto;
+    background: #091626;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1.5px solid #2b5c7a;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  }
+  .sug-item {
+    background: #12243a;
+    border: 1px solid #29425e;
+    border-radius: 9px;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    min-width: 0;
+    transition: background 0.1s, border-color 0.1s;
+  }
+  .sug-item:active, .sug-item:hover { background: #193652; border-color: var(--primary); }
+  .sug-name { font-size: 13.5px; font-weight: 800; color: #eaf5ff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sug-rate { font-size: 12px; font-weight: 700; color: #5eead4; margin-top: 3px; display: flex; justify-content: space-between; align-items: center; }
+  .sug-tap-hint { font-size: 10px; color: #a8bfd3; font-weight: 600; background: #1f344c; padding: 1px 6px; border-radius: 4px; }
+
+  /* STEPPER FOR QTY */
+  .qty-box { display: flex; align-items: center; gap: 4px; }
+  .qty-btn {
+    width: 38px;
+    height: 44px;
+    padding: 0;
+    font-size: 19px;
+    background: #1a2d44;
+    color: #e4f2ff;
+    border: 1px solid #2d4561;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  /* BILL TABLE */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 8px 4px; border-bottom: 1px solid #22354a; text-align: left; vertical-align: middle; }
+  th { font-size: 11px; color: #8fa6bd; text-transform: uppercase; font-weight: 800; }
+  .num { text-align: right; }
+  .inline-edit {
+    width: 68px;
+    min-height: 36px;
+    padding: 5px 6px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1.5px solid #2f4762;
+    background: #091524;
+    color: #eaf5ff;
+  }
+  .inline-edit:focus { background: #0f2238; border-color: var(--primary); }
+  .inline-qty { width: 52px; }
+  .empty-bill { text-align: center; padding: 20px 10px; color: var(--muted); font-size: 13px; font-style: italic; }
+
+  /* SUMMARY BAR */
+  .bill-summary-bar {
+    position: sticky;
+    bottom: 8px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(100deg, #0d2c3a, #102a38);
+    border: 1px solid rgba(52, 211, 153, 0.32);
+    padding: 11px 14px;
+    border-radius: 11px;
+    margin-top: 10px;
+    font-weight: 800;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+  }
+  .bill-summary-total { font-size: 19px; color: #6ee7b7; }
+
+  /* RECEIPT PREVIEW */
+  .preview-wrap {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(145deg, #091524, #112236);
+    border: 1px solid #243b55;
+    padding: 14px;
+    border-radius: 14px;
+    overflow-x: auto;
+  }
+  .preview {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13.5px;
+    font-weight: 800;
+    background: #fffdf5;
+    padding: 14px 12px;
+    border: 1px solid #d7d2c3;
+    border-top: 4px dashed #92a4b7;
+    border-bottom: 4px dashed #92a4b7;
+    white-space: pre;
+    line-height: 1.55;
+    color: #0f172a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* DRAWER: CATALOG, BACKUP & BILL HISTORY */
+  #catalogBox { display: none; }
+  .section-divider {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1.5px dashed #2b425c;
+  }
+  .catalog-search { margin-bottom: 8px; }
+  .item-tag-list {
+    max-height: 165px;
+    overflow-y: auto;
+    border: 1px solid #263b54;
+    padding: 8px;
+    border-radius: 10px;
+    background: #081321;
+  }
+  .item-tag-list:empty::before {
+    content: "No items match your search.";
+    display: block;
+    padding: 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .item-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #13263d;
+    border: 1px solid #2c4460;
+    color: #dceafa;
+    padding: 5px 9px;
+    border-radius: 7px;
+    margin: 3px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  .catalog-delete {
+    width: auto;
+    min-height: 0;
+    padding: 0 3px;
+    color: #fb7185;
+    background: transparent;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  /* BILL HISTORY LIST (35 DAYS) */
+  .history-list {
+    max-height: 310px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 2px;
+  }
+  .history-card {
+    background: #091525;
+    border: 1px solid #253c56;
+    border-radius: 12px;
+    padding: 11px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .history-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .history-cust { font-size: 14px; font-weight: 800; color: #f0f7ff; }
+  .history-meta { font-size: 11.5px; color: #8ea6c2; margin-top: 2px; }
+  .history-total-badge {
+    background: rgba(52, 211, 153, 0.14);
+    border: 1px solid rgba(52, 211, 153, 0.35);
+    color: #6ee7b7;
+    padding: 4px 9px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .history-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .history-actions button {
+    flex: 1;
+    min-height: 35px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .history-empty {
+    text-align: center;
+    padding: 18px 12px;
+    color: var(--muted);
+    font-size: 13px;
+    background: #081321;
+    border: 1px dashed #263b54;
+    border-radius: 10px;
+  }
+
+  /* SMOOTH FUTURISTIC TOAST BANNER */
+  .toast-container {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-130%);
+    z-index: 9999;
+    width: min(92vw, 440px);
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: rgba(10, 22, 38, 0.96);
+    border: 1.5px solid var(--primary);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55), 0 0 18px var(--primary-glow);
+    color: #f0f9ff;
+    font-size: 13.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .toast-container.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  .toast-container.toast-success { border-color: #34d399; box-shadow: 0 14px 35px rgba(0,0,0,0.55), 0 0 18px var(--accent-glow); }
+  .toast-container.toast-warn { border-color: #fbbf24; box-shadow: 0 14px 35px rgba(0,0,0,0.55), 0 0 18px rgba(251, 191, 36, 0.25); }
+  .toast-container.toast-danger { border-color: #fb7185; box-shadow: 0 14px 35px rgba(0,0,0,0.55), 0 0 18px rgba(251, 113, 133, 0.28); }
+
+  /* FUTURISTIC CUSTOM MODALS */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(3, 9, 18, 0.78);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .modal-backdrop.open { display: flex; animation: modalFadeIn 0.18s ease-out; }
+  @keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .modal-card {
+    width: 100%;
+    max-width: 430px;
+    max-height: 88vh;
+    overflow-y: auto;
+    background: linear-gradient(160deg, #112238, #0a1524);
+    border: 1.5px solid rgba(56, 189, 248, 0.38);
+    border-radius: 20px;
+    padding: 20px 18px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65), 0 0 24px rgba(56, 189, 248, 0.14);
+    color: var(--text);
+  }
+  .modal-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #f0f9ff;
+    margin: 0 0 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-desc {
+    font-size: 13.5px;
+    color: #9eb4ca;
+    margin-bottom: 16px;
+    line-height: 1.45;
+  }
+  .modal-btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .modal-btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  /* 1-TIME SECURITY PIN LOCK SCREEN OVERLAY */
+  #pinLockOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9500;
+    background: radial-gradient(circle at 50% 25%, #102a45, #040a14 70%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #pinLockOverlay.active { display: flex; }
+  .pin-card {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(14, 27, 45, 0.95);
+    border: 1.5px solid rgba(56, 189, 248, 0.4);
+    border-radius: 22px;
+    padding: 26px 22px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.16);
+  }
+  .pin-input {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 10px;
+    font-weight: 800;
+    margin: 14px 0;
+    height: 54px;
+  }
+  .pin-error {
+    color: #fb7185;
+    font-size: 12.5px;
+    font-weight: 700;
+    min-height: 18px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 540px) {
+    body { padding: 10px 10px 32px; }
+    .card { padding: 14px; border-radius: 16px; }
+    .header-bar { padding: 13px 14px; border-radius: 16px; }
+    .header-title { font-size: 16px; }
+    .row { gap: 7px; }
+    .table-wrap table { min-width: 480px; }
+    th, td { padding: 8px 4px; }
+    .inline-edit { width: 60px; }
+    .inline-qty { width: 48px; }
+    .preview-wrap { justify-content: flex-start; padding: 10px; }
+  }
+  @media (max-width: 380px) {
+    .row { flex-wrap: wrap; }
+    .row > .col { flex: 1 1 100% !important; }
+    .qty-box { max-width: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1-TIME FUTURISTIC PIN LOCK MODAL -->
+<div id="pinLockOverlay">
+  <div class="pin-card">
+    <div style="font-size: 34px; margin-bottom: 6px;">🔐</div>
+    <div class="modal-title" style="justify-content: center; font-size: 18px;">FastBill Security Lock</div>
+    <div class="modal-desc" style="margin-bottom: 6px;">Enter your 4-digit Shop Security PIN once to unlock this device permanently.</div>
+    <input type="password" id="pinLockInput" class="pin-input" inputmode="numeric" maxlength="8" placeholder="••••" onkeydown="if(event.key==='Enter') verifyShopPin()">
+    <div id="pinErrorText" class="pin-error"></div>
+    <button class="btn-blue" onclick="verifyShopPin()">⚡ Unlock FastBill</button>
+  </div>
+</div>
+
+<!-- SMOOTH AUTO-HIDING TOAST BANNER -->
+<div id="toastBanner" class="toast-container">
+  <span id="toastIcon">⚡</span>
+  <span id="toastMessage">Ready</span>
+</div>
+
+<!-- UNIVERSAL CONFIRMATION MODAL -->
+<div id="confirmModal" class="modal-backdrop">
+  <div class="modal-card">
+    <div class="modal-title" id="confirmModalTitle">⚠️ Confirm Action</div>
+    <div class="modal-desc" id="confirmModalDesc">Are you sure you want to proceed?</div>
+    <div class="modal-btn-row">
+      <button class="btn-gray" style="flex:1;" onclick="closeConfirmModal()">✕ Cancel</button>
+      <button class="btn-blue" id="confirmModalActionBtn" style="flex:1;">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- SMART PASTE BILL CHOICE MODAL -->
+<div id="pasteChoiceModal" class="modal-backdrop">
+  <div class="modal-card">
+    <div class="modal-title">
+      <span>📥 Paste Copied Bill</span>
+      <button class="btn-gray" onclick="closePasteChoiceModal()">✕</button>
+    </div>
+    <div class="modal-desc" id="pasteChoiceDesc">
+      You already have items in your Current Bill. How would you like to paste the copied bill?
+    </div>
+    <div class="modal-btn-stack">
+      <button class="btn-blue" onclick="executePasteBill('replace')">🔄 Replace Current Bill</button>
+      <button class="btn-green" style="font-size:14.5px; padding:11px;" onclick="executePasteBill('append')">➕ Add to Bottom of Current Bill</button>
+      <button class="btn-gray" style="width:100%;" onclick="closePasteChoiceModal()">✕ Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- VIEW HISTORY BILL MODAL -->
+<div id="viewHistoryModal" class="modal-backdrop">
+  <div class="modal-card">
+    <div class="modal-title">
+      <span id="viewHistoryModalTitle">🧾 Saved Bill Receipt</span>
+      <button class="btn-gray" onclick="closeViewHistoryModal()">✕ Close</button>
+    </div>
+    <div class="preview-wrap" style="margin: 10px 0;">
+      <div id="viewHistoryReceiptText" class="preview"></div>
+    </div>
+    <div class="modal-btn-row">
+      <button class="btn-cyan-sm" style="flex:1;" id="viewModalCopyBtn">📋 Copy This Bill</button>
+      <button class="btn-green" style="flex:1; font-size:13.5px; padding:10px;" id="viewModalPrintBtn">🖨️ Print Again</button>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP BACKUP TEXT MODAL -->
+<div id="textBackupModal" class="modal-backdrop">
+  <div class="modal-card">
+    <div class="modal-title">
+      <span id="textBackupModalTitle">📥 Paste WhatsApp Backup</span>
+      <button class="btn-gray" onclick="closeTextBackupModal()">✕ Close</button>
+    </div>
+    <div class="modal-desc" id="textBackupModalDesc">Paste your copied backup JSON text below:</div>
+    <textarea id="textBackupInput" rows="5" placeholder='{"shopName":"Wholesale Shop","catalog":[...]}'></textarea>
+    <div class="modal-btn-row">
+      <button class="btn-gray" style="flex:1;" onclick="closeTextBackupModal()">Cancel</button>
+      <button class="btn-blue" style="flex:1;" id="textBackupSubmitBtn" onclick="submitTextBackupModal()">✅ Restore Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER BAR -->
+<div class="header-bar">
+  <div>
+    <div class="header-title" id="topShopTitle">⚡ WHOLESALE BILLING</div>
+    <div class="header-sub">
+      <span class="autosave-dot"></span>
+      <span id="catalogCountText">Auto-Save Active • 189 Items</span>
+    </div>
+  </div>
+  <button class="btn-header" onclick="toggleCatalog()">⚙️ Items / History</button>
+</div>
+
+<!-- CUSTOMER NAME -->
+<div class="card" style="padding: 14px 16px;">
+  <label for="custName">Customer Name (Optional)</label>
+  <input type="text" id="custName" placeholder="Walk-in / Shop Name" oninput="onBillMetaInput()">
+</div>
+
+<!-- DRAWER: 1. ADD/UPDATE ITEMS, 2. BACKUP/RESTORE, 3. 35-DAY BILL HISTORY -->
+<div class="card" id="catalogBox">
+  <h3>
+    <span>📦 Add / Update Wholesale Item</span>
+    <button class="btn-gray" onclick="toggleCatalog()">✕ Close Panel</button>
+  </h3>
+  <div class="row">
+    <div class="col" style="flex:1.8;">
+      <label>Item Name (Max 16 chars)</label>
+      <input type="text" id="newItemName" maxlength="16" placeholder="e.g. ParleG 5rs">
+    </div>
+    <div class="col">
+      <label>Wholesale Rate (₹)</label>
+      <input type="number" id="newItemRate" placeholder="108">
+    </div>
+  </div>
+  <button class="btn-blue" onclick="saveItemToCatalog()">💾 Save / Update Item in Price Book</button>
+
+  <div style="margin-top: 12px;">
+    <input type="text" id="filterCatalogInput" class="catalog-search" placeholder="🔍 Search in saved price book..." oninput="updateCatalogUI()">
+    <div id="savedItemsList" class="item-tag-list"></div>
+  </div>
+
+  <!-- SECTION 2: BACKUP & RESTORE PRICE BOOK -->
+  <div class="section-divider">
+    <label>💾 Backup & Restore Price Book (Phone / WhatsApp)</label>
+    <div class="row" style="margin-top: 6px;">
+      <div class="col">
+        <button class="btn-outline" onclick="downloadBackupFile()">⬇️ Download File</button>
+      </div>
+      <div class="col">
+        <button class="btn-outline" onclick="copyBackupToWhatsApp()">📋 Copy for WhatsApp</button>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col">
+        <input type="file" id="restoreFileInput" accept=".json,.txt" style="display:none" onchange="restoreFromFile(event)">
+        <button class="btn-outline" onclick="document.getElementById('restoreFileInput').click()">⬆️ Restore File</button>
+      </div>
+      <div class="col">
+        <button class="btn-outline" onclick="openTextBackupModal()">📥 Paste WhatsApp Text</button>
+      </div>
+    </div>
+    <div style="margin-top: 8px; text-align: right;">
+      <button class="btn-gray" onclick="resetToMasterCatalog()">🔄 Reset to Built-In Items</button>
+    </div>
+  </div>
+
+  <!-- SECTION 3: 35-DAY PRINTED BILL HISTORY -->
+  <div class="section-divider">
+    <h3>
+      <span>🕒 History of Bills (<span id="historyCountBadge">0</span>)</span>
+      <span style="font-size:11px; color:var(--muted); font-weight:600;">Auto-saved for 35 Days</span>
+    </h3>
+    <input type="text" id="historySearchInput" class="catalog-search" placeholder="🔍 Search history by customer, date, or item..." oninput="renderHistoryList()">
+    <div id="billHistoryList" class="history-list"></div>
+  </div>
+</div>
+
+<!-- FAST BILLING ENTRY -->
+<div class="card">
+  <div class="search-wrapper">
+    <label>1. Search Item (Tap item from double-row list below)</label>
+    <input type="text" id="billItem" maxlength="16" autocomplete="off" placeholder="Type starting letters (e.g. Pa, Da, Ku, Go)..." oninput="onSearchInput()" onfocus="onSearchInput()">
+    <button class="search-clear" id="clearSearchBtn" onclick="clearSearchInput()">✕</button>
+    <div id="suggestionsGrid" class="suggestions-grid"></div>
+  </div>
+
+  <div class="row" style="margin-top: 10px; margin-bottom: 0;">
+    <div class="col" style="flex: 1.25;">
+      <label>2. Qty (Bdl/Lots)</label>
+      <div class="qty-box">
+        <button type="button" class="qty-btn" onclick="stepEntryQty(-1)">−</button>
+        <input type="number" id="billQty" value="1" min="1" max="999" style="text-align:center;" onkeydown="if(event.key==='Enter') addItemToBill()">
+        <button type="button" class="qty-btn" onclick="stepEntryQty(1)">+</button>
+      </div>
+    </div>
+    <div class="col">
+      <label>3. Rate (Editable)</label>
+      <input type="number" id="billRate" placeholder="₹ Rate" max="99999" onkeydown="if(event.key==='Enter') addItemToBill()">
+    </div>
+    <div class="col" style="flex: 0.9;">
+      <button class="btn-blue" style="height: 44px;" onclick="addItemToBill()">+ ADD</button>
+    </div>
+  </div>
+</div>
+
+<!-- CURRENT BILL TABLE -->
+<div class="card">
+  <h3>
+    <span>🧾 Current Bill (<span id="itemCountBadge">0</span>)</span>
+    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+      <button class="btn-cyan-sm" onclick="onPasteBillClick()">📥 Paste Bill</button>
+      <button class="btn-gray" onclick="clearBill()">🗑️ New / Clear Bill</button>
+    </div>
+  </h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th class="num">Qty</th>
+          <th class="num">Rate (Edit)</th>
+          <th class="num">Total</th>
+          <th class="num"></th>
+        </tr>
+      </thead>
+      <tbody id="billTableBody">
+        <tr><td colspan="5" class="empty-bill">No items added yet. Search and add items above.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bill-summary-bar">
+    <span>BILL TOTAL:</span>
+    <span class="bill-summary-total" id="liveBillTotalText">₹0</span>
+  </div>
+
+  <!-- OPTIONAL PREVIOUS BALANCE & CASH PAID -->
+  <div class="row" style="margin-top: 12px; margin-bottom: 0;">
+    <div class="col">
+      <label>Prev Baaki (Optional)</label>
+      <input type="number" id="prevBaaki" placeholder="0" oninput="onBillMetaInput()">
+    </div>
+    <div class="col">
+      <label>Cash Paid (Optional)</label>
+      <input type="number" id="cashPaid" placeholder="0" oninput="onBillMetaInput()">
+    </div>
+  </div>
+</div>
+
+<!-- LIVE 32-CHARACTER RECEIPT PREVIEW & PRINT -->
+<div class="card">
+  <h3>🧾 Receipt Preview (Full 16-Char Item Names)</h3>
+  <div class="preview-wrap">
+    <div id="receiptPreview" class="preview"></div>
+  </div>
+
+  <button class="btn-green" style="margin-top:12px;" onclick="printViaRawBT()">🖨️ PRINT RECEIPT (2-INCH)</button>
+</div>
+
+<script>
+  // =========================================================================
+  // 0. 1-TIME FUTURISTIC PIN LOCK & SMOOTH TOAST / MODAL ENGINE
+  // =========================================================================
+  const SHOP_PIN = "1793"; // Change to your desired 4-digit PIN
+
+  function checkPinLockOnBoot() {
+    if (localStorage.getItem('shop_unlocked') !== 'true') {
+      const overlay = document.getElementById('pinLockOverlay');
+      overlay.classList.add('active');
+      setTimeout(() => document.getElementById('pinLockInput').focus(), 80);
+    }
+  }
+
+  function verifyShopPin() {
+    const input = document.getElementById('pinLockInput');
+    const err = document.getElementById('pinErrorText');
+    if (input.value.trim() === SHOP_PIN) {
+      localStorage.setItem('shop_unlocked', 'true');
+      document.getElementById('pinLockOverlay').classList.remove('active');
+      showToast("🔓 FastBill Unlocked Permanently!", "success");
+    } else {
+      err.innerText = "❌ Incorrect PIN. Please try again.";
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  let toastTimer = null;
+  function showToast(message, type = "info") {
+    const banner = document.getElementById('toastBanner');
+    const icon = document.getElementById('toastIcon');
+    const text = document.getElementById('toastMessage');
+
+    banner.className = 'toast-container';
+    if (type === 'success') { banner.classList.add('toast-success'); icon.innerText = '✅'; }
+    else if (type === 'warn') { banner.classList.add('toast-warn'); icon.innerText = '⚠️'; }
+    else if (type === 'danger') { banner.classList.add('toast-danger'); icon.innerText = '🗑️'; }
+    else { icon.innerText = '⚡'; }
+
+    text.innerText = message;
+    banner.classList.add('show');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      banner.classList.remove('show');
+    }, 2600);
+  }
+
+  let pendingConfirmCallback = null;
+  function openConfirmModal(title, desc, btnLabel, isDanger, onConfirm) {
+    document.getElementById('confirmModalTitle').innerText = title;
+    document.getElementById('confirmModalDesc').innerText = desc;
+    const actionBtn = document.getElementById('confirmModalActionBtn');
+    actionBtn.innerText = btnLabel || "Confirm";
+    actionBtn.className = isDanger ? "btn-red" : "btn-blue";
+    actionBtn.style.flex = "1";
+    actionBtn.style.minHeight = "42px";
+    pendingConfirmCallback = onConfirm;
+    document.getElementById('confirmModal').classList.add('open');
+  }
+
+  function closeConfirmModal() {
+    document.getElementById('confirmModal').classList.remove('open');
+    pendingConfirmCallback = null;
+  }
+
+  document.getElementById('confirmModalActionBtn').addEventListener('click', () => {
+    const fn = pendingConfirmCallback;
+    closeConfirmModal();
+    if (typeof fn === 'function') fn();
+  });
+
+  // =========================================================================
+  // 1. SHOP NAME & ALL 189 WHOLESALE MASTER ITEMS
+  // =========================================================================
+  const DEFAULT_SHOP_NAME = "ALI BROTHERS";
+
+  const MASTER_ITEMS = [
+    { name: "2in1 5rs", rate: 54 },
+    { name: "20-20 5rs", rate: 54 },
+    { name: "50-50 5rs", rate: 54 },
+    { name: "Advance", rate: 115 },
+    { name: "AlooBhujia 10rs", rate: 100 },
+    { name: "AlooBhujia 5rs", rate: 51 },
+    { name: "Ariel 10rs (6p)", rate: 54 },
+    { name: "Belts 5rs", rate: 210 },
+    { name: "Bhel 5rs", rate: 51 },
+    { name: "Bournvita 5rs", rate: 63 },
+    { name: "Bournvita 10rs", rate: 108 },
+    { name: "Bhujia 10rs", rate: 100 },
+    { name: "Bhujia 5rs", rate: 51 },
+    { name: "Bites 10rs", rate: 210 },
+    { name: "BlackMagic", rate: 54 },
+    { name: "Boomer", rate: 140 },
+    { name: "Bru 10rs (6p)", rate: 54 },
+    { name: "ButterDelite 5", rate: 45 },
+    { name: "ButterDelite 10", rate: 90 },
+    { name: "Cake 15rs (6p)", rate: 81 },
+    { name: "Cavander", rate: 90 },
+    { name: "CenterFresh", rate: 200 },
+    { name: "CenterFruit", rate: 185 },
+    { name: "Chana 10rs", rate: 100 },
+    { name: "Chana 5rs", rate: 51 },
+    { name: "Chocoliebe", rate: 185 },
+    { name: "Choti Gold", rate: 120 },
+    { name: "Classic Cig.", rate: 450 },
+    { name: "ClinicPlus 1rs", rate: 13 },
+    { name: "CornMixture 5rs", rate: 51 },
+    { name: "CraxBlue 5rs", rate: 60 },
+    { name: "CraxRed 5rs", rate: 60 },
+    { name: "CreamFills", rate: 185 },
+    { name: "Crispello", rate: 365 },
+    { name: "Crunchy 5rs", rate: 50 },
+    { name: "Curls 5rs", rate: 60 },
+    { name: "CNC 5rs", rate: 54 },
+    { name: "Dark.F-Cake 10", rate: 105 },
+    { name: "DarkFantasy", rate: 90 },
+    { name: "Dairy 100rs (1p)", rate: 90 },
+    { name: "Dairy 10rs", rate: 515 },
+    { name: "Dairy 20rs (1p)", rate: 18 },
+    { name: "Dairy 45rs (1p)", rate: 40 },
+    { name: "Dairy 5rs", rate: 330 },
+    { name: "DalBiji", rate: 100 },
+    { name: "Define", rate: 330 },
+    { name: "DilBagh 10rs", rate: 190 },
+    { name: "DilBagh 5rs", rate: 130 },
+    { name: "Dove 2rs", rate: 25 },
+    { name: "Dove 5rs", rate: 60 },
+    { name: "DreamLite 5rs", rate: 54 },
+    { name: "DreamLite 10rs", rate: 90 },
+    { name: "DulhanGul", rate: 210 },
+    { name: "Eno", rate: 50 },
+    { name: "Fena 10rs (4p)", rate: 35 },
+    { name: "Fena 5rs (6p)", rate: 27 },
+    { name: "FiveStar 5rs", rate: 250 },
+    { name: "FiveStar 10rs", rate: 360 },
+    { name: "FeviQuick (1L)", rate: 110 },
+    { name: "Frits 5rs", rate: 60 },
+    { name: "FunFine 5rs", rate: 50 },
+    { name: "FunTop 1rs", rate: 50 },
+    { name: "Gathiya 5rs", rate: 51 },
+    { name: "Gems 5rs", rate: 83 },
+    { name: "GoodDay 10rs", rate: 108 },
+    { name: "GoodDay 5rs", rate: 54 },
+    { name: "Gopal 10rs", rate: 180 },
+    { name: "Gopal 20rs", rate: 340 },
+    { name: "Gopal 5rs", rate: 90 },
+    { name: "GreenApple", rate: 90 },
+    { name: "Gupshup 5rs", rate: 51 },
+    { name: "HappyDent", rate: 185 },
+    { name: "Hansaplast", rate: 120 },
+    { name: "Head&Sho 2rs", rate: 25 },
+    { name: "Impact 1kg", rate: 120 },
+    { name: "Impact 10rs(6p)", rate: 54 },
+    { name: "JaiBharat 10rs", rate: 170 },
+    { name: "JaiBharat 20rs", rate: 420 },
+    { name: "Jam 2rs", rate: 105 },
+    { name: "JimJam 10rs(6p)", rate: 54 },
+    { name: "KamlaPasand 5rs", rate: 180 },
+    { name: "Kaveri", rate: 75 },
+    { name: "KhattaMeetha 10", rate: 100 },
+    { name: "KhattaMeetha 5rs", rate: 51 },
+    { name: "KitKat 10rs", rate: 380 },
+    { name: "Kopiko", rate: 200 },
+    { name: "KrackJack 5rs", rate: 54 },
+    { name: "Kuber 20rs", rate: 270 },
+    { name: "Kurkure 10rs", rate: 108 },
+    { name: "Kurkure 20rs", rate: 18 },
+    { name: "Kurkure 5rs", rate: 54 },
+    { name: "Laccha 5rs", rate: 52 },
+    { name: "Lays 10rs", rate: 108 },
+    { name: "Lays 5rs", rate: 54 },
+    { name: "Lifebuoy 10rs", rate: 36 },
+    { name: "Lite 5rs", rate: 51 },
+    { name: "LittleHeart 10rs", rate: 135 },
+    { name: "LittleHeart 5rs", rate: 67 },
+    { name: "Lollipop 5rs", rate: 210 },
+    { name: "Lux 10rs", rate: 36 },
+    { name: "Lux Big", rate: 120 },
+    { name: "MadAngle 10rs", rate: 96 },
+    { name: "Maggi 15rs (12p)", rate: 165 },
+    { name: "Malai Sev", rate: 100 },
+    { name: "MarieGold 10(6p)", rate: 54 },
+    { name: "Masala chips 10", rate: 106 },
+    { name: "MaggiMasala (1L)", rate: 68 },
+    { name: "MaggiMasala (4L)", rate: 270 },
+    { name: "MasalaChips 20rs", rate: 16 },
+    { name: "MasalaChips 5rs", rate: 52 },
+    { name: "Maska 10rs (6p)", rate: 54 },
+    { name: "Matar 5rs", rate: 51 },
+    { name: "Maza 5rs", rate: 54 },
+    { name: "Melody", rate: 90 },
+    { name: "Mentos", rate: 185 },
+    { name: "Merlin", rate: 210 },
+    { name: "MilkyBar", rate: 125 },
+    { name: "MilkyCube", rate: 90 },
+    { name: "MomsMagic 10rs", rate: 108 },
+    { name: "Monaco 5rs", rate: 90 },
+    { name: "MoongDal 10rs", rate: 100 },
+    { name: "MoongDal 5rs", rate: 51 },
+    { name: "Munch", rate: 145 },
+    { name: "MusaGul", rate: 170 },
+    { name: "Natkhat 5rs", rate: 60 },
+    { name: "Navratan 10rs", rate: 100 },
+    { name: "Navratan 5rs", rate: 51 },
+    { name: "Nescafe 10rs(6p)", rate: 54 },
+    { name: "Nippo AA", rate: 80 },
+    { name: "Nippo AAA", rate: 130 },
+    { name: "No.1 10rs", rate: 36 },
+    { name: "No.1 Big", rate: 105 },
+    { name: "NutCracker 10rs", rate: 100 },
+    { name: "NavyCut", rate: 115 },
+    { name: "NutCracker 5rs", rate: 51 },
+    { name: "NutriChoice 25rs", rate: 22 },
+    { name: "OnionChips 20rs", rate: 16 },
+    { name: "OnionChips 10rs", rate: 106 },
+    { name: "OnionChips 5rs", rate: 52 },
+    { name: "Oyes 5rs", rate: 52 },
+    { name: "PalakSev", rate: 100 },
+    { name: "Panchratan 10rs", rate: 100 },
+    { name: "Papdi 5rs", rate: 52 },
+    { name: "ParleG 5rs", rate: 108 },
+    { name: "Pasta 5rs", rate: 50 },
+    { name: "Peanut 10rs", rate: 100 },
+    { name: "Peanut 5rs", rate: 51 },
+    { name: "Piknik 5rs", rate: 50 },
+    { name: "PinkChips 10rs", rate: 106 },
+    { name: "PinkChips 5rs", rate: 52 },
+    { name: "Pipe 5rs", rate: 52 },
+    { name: "Popcorn 5rs", rate: 55 },
+    { name: "PudinaChips 10rs", rate: 106 },
+    { name: "PudinaChips 20rs", rate: 16 },
+    { name: "PudinaChips 5rs", rate: 52 },
+    { name: "Puffcorn 5rs", rate: 52 },
+    { name: "Pulse", rate: 150 },
+    { name: "Punjabi 10rs", rate: 100 },
+    { name: "Punjabi 5rs", rate: 51 },
+    { name: "Red&White", rate: 90 },
+    { name: "Roasted 10rs", rate: 100 },
+    { name: "Rajni-Tulsi", rate: 60 },
+    { name: "SaltedChips 10rs", rate: 106 },
+    { name: "RedChips 5rs", rate: 52 },
+    { name: "RedChips 10rs", rate: 106 },
+    { name: "SaltedChips 20rs", rate: 16 },
+    { name: "SaltedChips 5rs", rate: 52 },
+    { name: "Satmola", rate: 15 },
+    { name: "Shehnai", rate: 45 },
+    { name: "SweetChilli 5rs", rate: 52 },
+    { name: "SweetChilli 10rs", rate: 106 },
+    { name: "Shikhar 10rs", rate: 130 },
+    { name: "Shikhar 20rs", rate: 195 },
+    { name: "Shikhar 40rs", rate: 390 },
+    { name: "Shikhar 5rs", rate: 215 },
+    { name: "SnacLite 10rs", rate: 88 },
+    { name: "Sunsilk 1rs", rate: 13 },
+    { name: "SuperStar", rate: 85 },
+    { name: "Swagat 10rs", rate: 110 },
+    { name: "Sweety", rate: 50 },
+    { name: "SwissRoll 10rs", rate: 105 },
+    { name: "SnacksZigZag 5rs", rate: 60 },
+    { name: "TakaTak 10rs", rate: 105 },
+    { name: "TakaTak 5rs", rate: 52 },
+    { name: "TedheMedhe 10rs", rate: 96 },
+    { name: "TedheMedhe 5rs", rate: 52 },
+    { name: "Tide 10rs (6p)", rate: 54 },
+    { name: "Tiger 5rs", rate: 54 },
+    { name: "Tops 10rs (6p)", rate: 50 },
+    { name: "Tresme 2rs", rate: 25 },
+    { name: "Tresme 5rs", rate: 60 },
+    { name: "Uncle 10rs", rate: 108 },
+    { name: "Uncle 20rs", rate: 18 },
+    { name: "Vatika 1rs", rate: 13 },
+    { name: "Vim 10rs", rate: 38 },
+    { name: "Vim 5rs (12p)", rate: 55 },
+    { name: "Vimal 5rs", rate: 130 },
+    { name: "Vivel", rate: 100 },
+    { name: "Winkies 10rs", rate: 310 },
+    { name: "Winkies 5rs", rate: 175 },
+    { name: "Wilkinson (1p)", rate: 12 },
+    { name: "Wilkinson (pkt)", rate: 240 },
+    { name: "Win Cigg.", rate: 120 },
+    { name: "Xl Soap 10rs(6p)", rate: 55 },
+    { name: "Xl Surf 10rs(6p)", rate: 54 },
+    { name: "Yippee 15rs(12p)", rate: 165 },
+    { name: "Yippee 5rs (12p)", rate: 55 },
+    { name: "Zeera 5rs", rate: 54 }
+  ];
+
+  function readStoredJson(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return fallback;
+      const parsed = JSON.parse(raw);
+      return parsed !== null && parsed !== undefined ? parsed : fallback;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  function readStoredArray(key) {
+    const val = readStoredJson(key, []);
+    return Array.isArray(val) ? val : [];
+  }
+
+  function loadMergedCatalog() {
+    const savedCustom = readStoredArray('ws_catalog_v2_custom');
+    const deletedNames = readStoredArray('ws_catalog_v2_deleted');
+    const deletedSet = new Set(deletedNames.map(n => String(n).toLowerCase()));
+
+    const map = new Map();
+    MASTER_ITEMS.forEach(item => {
+      if (!deletedSet.has(item.name.toLowerCase())) {
+        map.set(item.name.toLowerCase(), { name: item.name, rate: item.rate });
+      }
+    });
+    savedCustom.forEach(item => {
+      const name = item && typeof item.name === 'string' ? item.name.trim().substring(0, 16) : '';
+      const rate = Number.parseInt(item && item.rate, 10);
+      if (name && Number.isFinite(rate) && rate > 0 && rate <= 99999) {
+        map.set(name.toLowerCase(), { name, rate });
+      }
+    });
+    return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  let catalog = loadMergedCatalog();
+  let currentBill = [];
+  let shopDisplayName = localStorage.getItem('ws_shop_v2') || DEFAULT_SHOP_NAME;
+  document.getElementById('topShopTitle').innerText = "⚡ " + shopDisplayName;
+
+  // =========================================================================
+  // 2. INSTANT AUTO-SAVE ACTIVE BILL (NO MORE LOST 50-ITEM BILLS)
+  // =========================================================================
+  const DRAFT_STORAGE_KEY = 'ws_active_draft_v3';
+
+  function saveActiveBillDraft() {
+    try {
+      const draft = {
+        items: currentBill,
+        custName: document.getElementById('custName').value || '',
+        prevBaaki: document.getElementById('prevBaaki').value || '',
+        cashPaid: document.getElementById('cashPaid').value || ''
+      };
+      localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(draft));
+    } catch (e) {
+      console.error("Draft auto-save error:", e);
+    }
+  }
+
+  function restoreActiveBillDraft() {
+    const draft = readStoredJson(DRAFT_STORAGE_KEY, null);
+    if (!draft || typeof draft !== 'object') return;
+
+    if (Array.isArray(draft.items)) {
+      currentBill = draft.items
+        .filter(i => i && typeof i.name === 'string')
+        .map(i => ({
+          name: i.name.trim().substring(0, 16),
+          qty: Math.max(1, Math.min(999, parseInt(i.qty, 10) || 1)),
+          rate: Math.max(0, Math.min(99999, parseInt(i.rate, 10) || 0))
+        }));
+    }
+    document.getElementById('custName').value = draft.custName || '';
+    document.getElementById('prevBaaki').value = draft.prevBaaki || '';
+    document.getElementById('cashPaid').value = draft.cashPaid || '';
+  }
+
+  function onBillMetaInput() {
+    saveActiveBillDraft();
+    updateReceiptPreviewOnly();
+  }
+
+  function toggleCatalog() {
+    const box = document.getElementById('catalogBox');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+    if (box.style.display === 'block') {
+      updateCatalogUI();
+      renderHistoryList();
+    }
+  }
+
+  // =========================================================================
+  // 3. DOUBLE-ROW / 2-COLUMN CUSTOM SEARCH ENGINE
+  // =========================================================================
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, ch => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[ch]);
+  }
+
+  function onSearchInput() {
+    const inputEl = document.getElementById('billItem');
+    const rawVal = inputEl.value;
+    const query = rawVal.trim().toLowerCase();
+    const grid = document.getElementById('suggestionsGrid');
+    const clearBtn = document.getElementById('clearSearchBtn');
+
+    clearBtn.style.display = rawVal.length > 0 ? 'flex' : 'none';
+
+    if (!query) {
+      grid.style.display = 'none';
+      grid.innerHTML = '';
+      return;
+    }
+
+    document.getElementById('billRate').value = '';
+    const startsWith = [];
+    const contains = [];
+    for (let i = 0; i < catalog.length; i++) {
+      const item = catalog[i];
+      const lower = item.name.toLowerCase();
+      if (lower === query) {
+        document.getElementById('billRate').value = item.rate;
+      }
+      if (lower.startsWith(query)) startsWith.push(item);
+      else if (lower.includes(query)) contains.push(item);
+    }
+
+    const matches = startsWith.concat(contains).slice(0, 24);
+    if (matches.length === 0) {
+      grid.style.display = 'none';
+      grid.innerHTML = '';
+      return;
+    }
+
+    grid.innerHTML = matches.map(item => {
+      const safeName = escapeHtml(item.name);
+      return `
+        <button type="button" class="sug-item" data-item-name="${safeName}" data-item-rate="${item.rate}">
+          <div class="sug-name">${safeName}</div>
+          <div class="sug-rate">
+            <span>₹${item.rate}</span>
+            <span class="sug-tap-hint">Tap</span>
+          </div>
+        </button>
+      `;
+    }).join('');
+    grid.style.display = 'grid';
+  }
+
+  document.getElementById('suggestionsGrid').addEventListener('click', event => {
+    const item = event.target.closest('[data-item-name]');
+    if (item) selectSuggestedItem(item.dataset.itemName, Number(item.dataset.itemRate));
+  });
+
+  function selectSuggestedItem(name, rate) {
+    document.getElementById('billItem').value = name;
+    document.getElementById('billRate').value = rate;
+    document.getElementById('suggestionsGrid').style.display = 'none';
+    document.getElementById('clearSearchBtn').style.display = 'flex';
+    const qtyInput = document.getElementById('billQty');
+    qtyInput.focus();
+    qtyInput.select();
+  }
+
+  function clearSearchInput() {
+    document.getElementById('billItem').value = '';
+    document.getElementById('billRate').value = '';
+    document.getElementById('suggestionsGrid').style.display = 'none';
+    document.getElementById('clearSearchBtn').style.display = 'none';
+    document.getElementById('billItem').focus();
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.search-wrapper')) {
+      document.getElementById('suggestionsGrid').style.display = 'none';
+    }
+  });
+
+  function stepEntryQty(delta) {
+    const qtyEl = document.getElementById('billQty');
+    let current = parseInt(qtyEl.value, 10) || 1;
+    current = Math.max(1, Math.min(999, current + delta));
+    qtyEl.value = current;
+  }
+
+  // =========================================================================
+  // 4. GLITCH-FREE BILL TABLE, INLINE EDITING & SMART PASTE
+  // =========================================================================
+  function addItemToBill() {
+    const name = document.getElementById('billItem').value.trim().substring(0, 16);
+    const qty = Math.max(1, Math.min(999, parseInt(document.getElementById('billQty').value, 10) || 1));
+    const rate = Math.max(0, Math.min(99999, parseInt(document.getElementById('billRate').value, 10) || 0));
+
+    if (!name || rate <= 0) {
+      return showToast("Select an item and enter a valid Wholesale Rate.", "warn");
+    }
+
+    currentBill.push({ name, qty, rate });
+
+    document.getElementById('billItem').value = '';
+    document.getElementById('billQty').value = '1';
+    document.getElementById('billRate').value = '';
+    document.getElementById('suggestionsGrid').style.display = 'none';
+    document.getElementById('clearSearchBtn').style.display = 'none';
+
+    saveActiveBillDraft();
+    renderBillTableStructure();
+    updateReceiptPreviewOnly();
+  }
+
+  function renderBillTableStructure() {
+    const tbody = document.getElementById('billTableBody');
+    document.getElementById('itemCountBadge').innerText = currentBill.length;
+
+    if (currentBill.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" class="empty-bill">No items added yet. Search and add items above.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = currentBill.map((item, idx) => {
+      const amt = item.qty * item.rate;
+      return `
+        <tr>
+          <td style="font-weight:700;">${escapeHtml(item.name)}</td>
+          <td class="num">
+            <input class="inline-edit inline-qty" type="number" min="1" max="999" value="${item.qty}"
+              oninput="onInlineEdit(${idx}, 'qty', this.value)"
+              onblur="onInlineBlur(${idx}, 'qty', this)">
+          </td>
+          <td class="num">
+            <input class="inline-edit" type="number" min="1" max="99999" value="${item.rate}"
+              oninput="onInlineEdit(${idx}, 'rate', this.value)"
+              onblur="onInlineBlur(${idx}, 'rate', this)">
+          </td>
+          <td class="num" style="font-weight:800;" id="rowAmt-${idx}">${amt}</td>
+          <td class="num"><button class="btn-red" onclick="removeLineItem(${idx})">✕</button></td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  function onInlineEdit(idx, field, rawValue) {
+    if (!currentBill[idx]) return;
+    const parsed = rawValue === '' ? 0 : parseInt(rawValue, 10);
+    const max = field === 'qty' ? 999 : 99999;
+    const cleanVal = isNaN(parsed) ? 0 : Math.min(max, Math.max(0, parsed));
+    currentBill[idx][field] = cleanVal;
+
+    const rowAmtEl = document.getElementById(`rowAmt-${idx}`);
+    if (rowAmtEl) {
+      rowAmtEl.innerText = currentBill[idx].qty * currentBill[idx].rate;
+    }
+    saveActiveBillDraft();
+    updateReceiptPreviewOnly();
+  }
+
+  function onInlineBlur(idx, field, inputEl) {
+    if (!currentBill[idx]) return;
+    if (field === 'qty' && (!currentBill[idx].qty || currentBill[idx].qty < 1)) {
+      currentBill[idx].qty = 1;
+      inputEl.value = 1;
+    }
+    if (field === 'qty' || field === 'rate') {
+      const max = field === 'qty' ? 999 : 99999;
+      currentBill[idx][field] = Math.min(max, Math.max(field === 'qty' ? 1 : 0, currentBill[idx][field]));
+      inputEl.value = currentBill[idx][field];
+    }
+    const rowAmtEl = document.getElementById(`rowAmt-${idx}`);
+    if (rowAmtEl) {
+      rowAmtEl.innerText = currentBill[idx].qty * currentBill[idx].rate;
+    }
+    saveActiveBillDraft();
+    updateReceiptPreviewOnly();
+  }
+
+  function removeLineItem(index) {
+    currentBill.splice(index, 1);
+    saveActiveBillDraft();
+    renderBillTableStructure();
+    updateReceiptPreviewOnly();
+  }
+
+  function clearBill() {
+    if (currentBill.length === 0 && !document.getElementById('custName').value && !document.getElementById('prevBaaki').value && !document.getElementById('cashPaid').value) {
+      return showToast("Current bill is already empty.", "info");
+    }
+    openConfirmModal(
+      "🗑️ Clear Current Bill?",
+      `Remove all ${currentBill.length} items and start a fresh bill?`,
+      "🗑️ Clear Bill",
+      true,
+      () => {
+        currentBill = [];
+        document.getElementById('custName').value = '';
+        document.getElementById('prevBaaki').value = '';
+        document.getElementById('cashPaid').value = '';
+        saveActiveBillDraft();
+        renderBillTableStructure();
+        updateReceiptPreviewOnly();
+        showToast("Current bill cleared!", "danger");
+      }
+    );
+  }
+
+  // =========================================================================
+  // 5. STRICT 32-CHARACTER FORMATTING (16 NAME + 3 QTY + 5 RATE + 5 AMT)
+  // =========================================================================
+  function sanitizePrinterAscii(str) {
+    return String(str)
+      .replace(/₹\s*(\d+)/g, '$1r')
+      .replace(/₹/g, 'r')
+      .replace(/[^\x20-\x7E\n]/g, '');
+  }
+
+  function buildReceiptFromData(billItems, custName, prevVal, paidVal, dateObj) {
+    const W = 32;
+    const sep = "-".repeat(W) + "\n";
+    let out = "";
+
+    const shop = (shopDisplayName.trim() || DEFAULT_SHOP_NAME).substring(0, W);
+    const leftPad = Math.max(0, Math.floor((W - shop.length) / 2));
+    out += " ".repeat(leftPad) + shop + "\n";
+
+    const now = dateObj || new Date();
+    const dateStr = now.toLocaleDateString('en-GB', { day:'2-digit', month:'2-digit', year:'2-digit' });
+    const timeStr = now.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit', hour12:false });
+    const dtLine = `Date: ${dateStr}`;
+    const tmLine = `Time: ${timeStr}`;
+    out += dtLine.padEnd(Math.max(1, W - tmLine.length), ' ') + tmLine + "\n";
+
+    const cust = String(custName || '').trim();
+    if (cust) {
+      out += ("Cust: " + cust).substring(0, W) + "\n";
+    }
+
+    out += sep;
+    // Exact 32 chars: 16 + 1 + 3 + 1 + 5 + 1 + 5 = 32
+    out += "ITEM".padEnd(16, ' ') + " " + "QTY".padStart(3, ' ') + " " +
+           "RATE".padStart(5, ' ') + " " + "AMT".padStart(5, ' ') + "\n";
+    out += sep;
+
+    let billTotal = 0;
+    billItems.forEach(item => {
+      const amt = item.qty * item.rate;
+      billTotal += amt;
+      const cName = String(item.name || '').substring(0, 16).padEnd(16, ' ');
+      const cQty  = String(item.qty).substring(0, 3).padStart(3, ' ');
+      const cRate = String(item.rate).substring(0, 5).padStart(5, ' ');
+      const cAmt  = String(amt).substring(0, 5).padStart(5, ' ');
+      out += `${cName} ${cQty} ${cRate} ${cAmt}\n`;
+    });
+
+    out += sep;
+    const itemCnt = `Items: ${billItems.length}`;
+    const totStr  = `BILL TOTAL: ${String(billTotal).padStart(5, ' ')}`;
+    out += itemCnt.padEnd(Math.max(1, W - totStr.length), ' ') + totStr + "\n";
+
+    const prev = parseInt(prevVal, 10) || 0;
+    const paid = parseInt(paidVal, 10) || 0;
+
+    if (prev > 0 || paid > 0) {
+      const netTotal = billTotal + prev;
+      if (prev > 0) {
+        out += `Prev Baaki: ${String(prev).padStart(5, ' ')}`.padStart(W, ' ') + "\n";
+        out += "----------------".padStart(W, ' ') + "\n";
+        out += `NET TOTAL : ${String(netTotal).padStart(5, ' ')}`.padStart(W, ' ') + "\n";
+      }
+      if (paid > 0) {
+        out += `Cash Paid : ${String(paid).padStart(5, ' ')}`.padStart(W, ' ') + "\n";
+        out += "----------------".padStart(W, ' ') + "\n";
+        const newBaaki = netTotal - paid;
+        out += `NEW BAAKI : ${String(newBaaki).padStart(5, ' ')}`.padStart(W, ' ') + "\n";
+      }
+    }
+
+    out += sep + "\n\n";
+    return { text: out, total: billTotal };
+  }
+
+  function build32CharReceipt() {
+    const cust = document.getElementById('custName').value;
+    const prev = document.getElementById('prevBaaki').value;
+    const paid = document.getElementById('cashPaid').value;
+    return buildReceiptFromData(currentBill, cust, prev, paid, new Date());
+  }
+
+  function updateReceiptPreviewOnly() {
+    const previewEl = document.getElementById('receiptPreview');
+    const receipt = build32CharReceipt();
+    previewEl.innerText = receipt.text;
+    document.getElementById('liveBillTotalText').innerText = "₹" + receipt.total;
+  }
+
+  function printViaRawBT() {
+    if (currentBill.length === 0) {
+      return showToast("Please add at least 1 item before printing!", "warn");
+    }
+    // 1. Save bill to 35-day History automatically before invoking RawBT
+    saveCurrentBillToHistory();
+
+    // 2. Send clean 32-char ASCII receipt to RawBT
+    const receiptPayload = sanitizePrinterAscii(build32CharReceipt().text);
+    const base64Data = btoa(unescape(encodeURIComponent(receiptPayload)));
+    window.location.href = `intent:base64,${base64Data}#Intent;scheme=rawbt;package=ru.a402d.rawbtprinter;end;`;
+  }
+
+  // =========================================================================
+  // 6. 35-DAY BILL HISTORY + COPY / PASTE / VIEW / DELETE ENGINE
+  // =========================================================================
+  const HISTORY_STORAGE_KEY = 'ws_bill_history_v3';
+  const COPIED_BILL_KEY = 'ws_copied_bill_v3';
+  const HISTORY_RETENTION_MS = 35 * 24 * 60 * 60 * 1000; // 35 Days
+
+  function loadBillHistory() {
+    const rawList = readStoredArray(HISTORY_STORAGE_KEY);
+    const cutoff = Date.now() - HISTORY_RETENTION_MS;
+    const valid = rawList.filter(entry => entry && entry.timestamp && entry.timestamp >= cutoff && Array.isArray(entry.items));
+    if (valid.length !== rawList.length) {
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(valid));
+    }
+    return valid;
+  }
+
+  function saveCurrentBillToHistory() {
+    const history = loadBillHistory();
+    const custName = document.getElementById('custName').value.trim();
+    const prevBaaki = parseInt(document.getElementById('prevBaaki').value, 10) || 0;
+    const cashPaid = parseInt(document.getElementById('cashPaid').value, 10) || 0;
+    const itemsCopy = currentBill.map(i => ({ name: i.name, qty: i.qty, rate: i.rate }));
+    const billTotal = itemsCopy.reduce((sum, i) => sum + (i.qty * i.rate), 0);
+
+    // Prevent duplicate clutter if printing the exact same bill twice consecutively
+    const signature = JSON.stringify({ custName, prevBaaki, cashPaid, items: itemsCopy });
+    if (history.length > 0 && history[0].signature === signature) {
+      history[0].timestamp = Date.now();
+      history[0].dateDisplay = new Date().toLocaleString('en-IN', {
+        day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
+      });
+    } else {
+      history.unshift({
+        id: 'bill_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+        timestamp: Date.now(),
+        dateDisplay: new Date().toLocaleString('en-IN', {
+          day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
+        }),
+        custName: custName,
+        prevBaaki: prevBaaki,
+        cashPaid: cashPaid,
+        billTotal: billTotal,
+        items: itemsCopy,
+        signature: signature
+      });
+    }
+
+    localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(history));
+    renderHistoryList();
+  }
+
+  function renderHistoryList() {
+    const listEl = document.getElementById('billHistoryList');
+    const history = loadBillHistory();
+    document.getElementById('historyCountBadge').innerText = history.length;
+
+    const query = (document.getElementById('historySearchInput').value || '').trim().toLowerCase();
+    const filtered = history.filter(h => {
+      if (!query) return true;
+      const custMatch = (h.custName || 'walk-in').toLowerCase().includes(query);
+      const dateMatch = (h.dateDisplay || '').toLowerCase().includes(query);
+      const itemMatch = h.items.some(i => i.name.toLowerCase().includes(query));
+      return custMatch || dateMatch || itemMatch;
+    });
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = `<div class="history-empty">${
+        history.length === 0
+          ? "No printed bills in history yet. Every bill you print will be saved here for 35 days."
+          : "No saved bills match your search."
+      }</div>`;
+      return;
+    }
+
+    listEl.innerHTML = filtered.map(h => {
+      const custLabel = h.custName ? escapeHtml(h.custName) : "Walk-in Customer";
+      const itemPreview = h.items.slice(0, 3).map(i => `${escapeHtml(i.name)} (${i.qty})`).join(', ') +
+                          (h.items.length > 3 ? ` +${h.items.length - 3} more` : '');
+      return `
+        <div class="history-card">
+          <div class="history-top">
+            <div>
+              <div class="history-cust">👤 ${custLabel}</div>
+              <div class="history-meta">🗓️ ${escapeHtml(h.dateDisplay)} • ${h.items.length} Items</div>
+              <div class="history-meta" style="color:#a8bfd3; margin-top:3px;">📦 ${itemPreview}</div>
+            </div>
+            <div class="history-total-badge">₹${h.billTotal}</div>
+          </div>
+          <div class="history-actions">
+            <button type="button" class="btn-cyan-sm" onclick="copyBillFromHistory('${h.id}')">📋 Copy Bill</button>
+            <button type="button" class="btn-outline" onclick="viewBillFromHistory('${h.id}')">👁️ View</button>
+            <button type="button" class="btn-red" onclick="deleteBillFromHistory('${h.id}')">🗑️ Delete</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function copyBillFromHistory(billId) {
+    const history = loadBillHistory();
+    const found = history.find(h => h.id === billId);
+    if (!found) return showToast("Bill not found in history.", "warn");
+
+    localStorage.setItem(COPIED_BILL_KEY, JSON.stringify(found));
+    showToast(`📋 Copied bill (${found.items.length} items)! Tap 'Paste Bill' in Current Bill.`, "success");
+  }
+
+  function onPasteBillClick() {
+    const copied = readStoredJson(COPIED_BILL_KEY, null);
+    if (!copied || !Array.isArray(copied.items) || copied.items.length === 0) {
+      return showToast("No copied bill found! Copy a bill from ⚙️ Items / History first.", "warn");
+    }
+
+    // If Current Bill is empty, paste directly without asking
+    if (currentBill.length === 0) {
+      executePasteBill('replace');
+    } else {
+      // If a bill is already open, show the 2-option futuristic modal
+      const custText = copied.custName ? `for "${copied.custName}"` : "";
+      document.getElementById('pasteChoiceDesc').innerText =
+        `You already have ${currentBill.length} item(s) in your Current Bill. How would you like to paste the copied bill (${copied.items.length} items ${custText})?`;
+      document.getElementById('pasteChoiceModal').classList.add('open');
+    }
+  }
+
+  function closePasteChoiceModal() {
+    document.getElementById('pasteChoiceModal').classList.remove('open');
+  }
+
+  function executePasteBill(mode) {
+    closePasteChoiceModal();
+    const copied = readStoredJson(COPIED_BILL_KEY, null);
+    if (!copied || !Array.isArray(copied.items)) return;
+
+    const clonedItems = copied.items.map(i => ({
+      name: String(i.name).substring(0, 16),
+      qty: Math.max(1, Math.min(999, parseInt(i.qty, 10) || 1)),
+      rate: Math.max(0, Math.min(99999, parseInt(i.rate, 10) || 0))
+    }));
+
+    if (mode === 'replace') {
+      currentBill = clonedItems;
+      document.getElementById('custName').value = copied.custName || '';
+      document.getElementById('prevBaaki').value = copied.prevBaaki > 0 ? copied.prevBaaki : '';
+      document.getElementById('cashPaid').value = copied.cashPaid > 0 ? copied.cashPaid : '';
+      showToast(`✅ Replaced bill with ${clonedItems.length} pasted items!`, "success");
+    } else {
+      currentBill = currentBill.concat(clonedItems);
+      if (!document.getElementById('custName').value && copied.custName) {
+        document.getElementById('custName').value = copied.custName;
+      }
+      showToast(`➕ Added ${clonedItems.length} items to the bottom of your bill!`, "success");
+    }
+
+    saveActiveBillDraft();
+    renderBillTableStructure();
+    updateReceiptPreviewOnly();
+  }
+
+  function viewBillFromHistory(billId) {
+    const history = loadBillHistory();
+    const found = history.find(h => h.id === billId);
+    if (!found) return;
+
+    const receiptObj = buildReceiptFromData(
+      found.items,
+      found.custName,
+      found.prevBaaki,
+      found.cashPaid,
+      new Date(found.timestamp)
+    );
+
+    document.getElementById('viewHistoryModalTitle').innerText =
+      `🧾 ${found.custName || 'Walk-in'} (${found.items.length} Items)`;
+    document.getElementById('viewHistoryReceiptText').innerText = receiptObj.text;
+
+    document.getElementById('viewModalCopyBtn').onclick = () => {
+      copyBillFromHistory(found.id);
+      closeViewHistoryModal();
+    };
+
+    document.getElementById('viewModalPrintBtn').onclick = () => {
+      const payload = sanitizePrinterAscii(receiptObj.text);
+      const base64Data = btoa(unescape(encodeURIComponent(payload)));
+      window.location.href = `intent:base64,${base64Data}#Intent;scheme=rawbt;package=ru.a402d.rawbtprinter;end;`;
+    };
+
+    document.getElementById('viewHistoryModal').classList.add('open');
+  }
+
+  function closeViewHistoryModal() {
+    document.getElementById('viewHistoryModal').classList.remove('open');
+  }
+
+  function deleteBillFromHistory(billId) {
+    const history = loadBillHistory();
+    const found = history.find(h => h.id === billId);
+    if (!found) return;
+
+    openConfirmModal(
+      "🗑️ Delete Bill from History?",
+      `Delete saved bill for "${found.custName || 'Walk-in'}" (₹${found.billTotal}) from ${found.dateDisplay}?`,
+      "🗑️ Delete",
+      true,
+      () => {
+        const updated = history.filter(h => h.id !== billId);
+        localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(updated));
+        renderHistoryList();
+        showToast("Saved bill deleted from history.", "danger");
+      }
+    );
+  }
+
+  // =========================================================================
+  // 7. CATALOG MANAGEMENT & BACKUP / RESTORE (WITH CUSTOM MODALS)
+  // =========================================================================
+  function persistCustomChanges() {
+    localStorage.setItem('ws_catalog_v2_custom', JSON.stringify(catalog));
+    document.getElementById('catalogCountText').innerText = `Auto-Save Active • ${catalog.length} Items Ready`;
+  }
+
+  function updateCatalogUI() {
+    const listDiv = document.getElementById('savedItemsList');
+    const filter = (document.getElementById('filterCatalogInput').value || '').trim().toLowerCase();
+    document.getElementById('catalogCountText').innerText = `Auto-Save Active • ${catalog.length} Items Ready`;
+
+    const filtered = catalog.filter(item => !filter || item.name.toLowerCase().includes(filter));
+    listDiv.innerHTML = filtered.map(item => {
+      const safeName = escapeHtml(item.name);
+      return `<span class="item-tag">${safeName} (₹${item.rate}) <button type="button" class="catalog-delete" data-delete-name="${safeName}" aria-label="Delete ${safeName}">×</button></span>`;
+    }).join('');
+  }
+
+  document.getElementById('savedItemsList').addEventListener('click', event => {
+    const button = event.target.closest('[data-delete-name]');
+    if (button) deleteCatalogItemByName(button.dataset.deleteName);
+  });
+
+  function saveItemToCatalog() {
+    const name = document.getElementById('newItemName').value.trim().substring(0, 16);
+    const rate = parseInt(document.getElementById('newItemRate').value, 10) || 0;
+    if (!name || rate <= 0) {
+      return showToast("Enter both Item Name (max 16 chars) and Wholesale Rate.", "warn");
+    }
+
+    const existingIdx = catalog.findIndex(i => i.name.toLowerCase() === name.toLowerCase());
+    if (existingIdx >= 0) {
+      catalog[existingIdx].name = name;
+      catalog[existingIdx].rate = rate;
+    } else {
+      catalog.push({ name, rate });
+      catalog.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    const deleted = readStoredArray('ws_catalog_v2_deleted')
+      .filter(n => typeof n === 'string' && n.toLowerCase() !== name.toLowerCase());
+    localStorage.setItem('ws_catalog_v2_deleted', JSON.stringify(deleted));
+
+    persistCustomChanges();
+    document.getElementById('newItemName').value = '';
+    document.getElementById('newItemRate').value = '';
+    updateCatalogUI();
+    showToast(`💾 Saved "${name}" at ₹${rate}!`, "success");
+  }
+
+  function deleteCatalogItemByName(name) {
+    openConfirmModal(
+      "🗑️ Delete Item from Price Book?",
+      `Remove "${name}" from your wholesale price book?`,
+      "🗑️ Delete Item",
+      true,
+      () => {
+        catalog = catalog.filter(i => i.name.toLowerCase() !== name.toLowerCase());
+        const deleted = readStoredArray('ws_catalog_v2_deleted')
+          .filter(n => typeof n === 'string' && n.toLowerCase() !== name.toLowerCase());
+        deleted.push(name);
+        localStorage.setItem('ws_catalog_v2_deleted', JSON.stringify(deleted));
+        persistCustomChanges();
+        updateCatalogUI();
+        showToast(`Deleted "${name}" from price book.`, "danger");
+      }
+    );
+  }
+
+  function resetToMasterCatalog() {
+    openConfirmModal(
+      "🔄 Reset to Built-In Master Items?",
+      "Restore all 189 built-in master items and rates?",
+      "🔄 Restore All",
+      false,
+      () => {
+        localStorage.removeItem('ws_catalog_v2_custom');
+        localStorage.removeItem('ws_catalog_v2_deleted');
+        catalog = loadMergedCatalog();
+        updateCatalogUI();
+        showToast("All 189 built-in wholesale items restored!", "success");
+      }
+    );
+  }
+
+  function getBackupPayload() {
+    return JSON.stringify({
+      shopName: shopDisplayName,
+      catalog: catalog
+    });
+  }
+
+  function applyBackupPayload(jsonStr) {
+    try {
+      const data = JSON.parse(jsonStr);
+      const importedList = Array.isArray(data) ? data : data.catalog;
+      if (!Array.isArray(importedList)) throw new Error("Invalid format");
+
+      catalog = importedList
+        .filter(i => i && i.name && Number(i.rate) > 0)
+        .map(i => ({ name: String(i.name).trim().substring(0, 16), rate: parseInt(i.rate, 10) }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      if (data.shopName) {
+        shopDisplayName = String(data.shopName).substring(0, 32);
+        localStorage.setItem('ws_shop_v2', shopDisplayName);
+        document.getElementById('topShopTitle').innerText = "⚡ " + shopDisplayName;
+      }
+      persistCustomChanges();
+      updateCatalogUI();
+      updateReceiptPreviewOnly();
+      showToast(`✅ Restored ${catalog.length} wholesale items!`, "success");
+    } catch (err) {
+      showToast("❌ Invalid backup data. Please check the file or text.", "danger");
+    }
+  }
+
+  function downloadBackupFile() {
+    const blob = new Blob([getBackupPayload()], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    const dateStr = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = `wholesale_backup_${dateStr}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast("⬇️ Backup file downloaded!", "success");
+  }
+
+  function copyBackupToWhatsApp() {
+    const text = getBackupPayload();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("📋 Backup copied! Paste it in WhatsApp to save.", "success");
+      }).catch(() => openTextBackupModalForCopy(text));
+    } else {
+      openTextBackupModalForCopy(text);
+    }
+  }
+
+  function openTextBackupModal() {
+    document.getElementById('textBackupModalTitle').innerText = "📥 Paste WhatsApp Backup";
+    document.getElementById('textBackupModalDesc').innerText = "Paste the backup text from WhatsApp below and tap Restore Now:";
+    const input = document.getElementById('textBackupInput');
+    input.value = '';
+    input.readOnly = false;
+    const submitBtn = document.getElementById('textBackupSubmitBtn');
+    submitBtn.style.display = 'inline-block';
+    document.getElementById('textBackupModal').classList.add('open');
+    setTimeout(() => input.focus(), 60);
+  }
+
+  function openTextBackupModalForCopy(text) {
+    document.getElementById('textBackupModalTitle').innerText = "📋 Copy Backup Text";
+    document.getElementById('textBackupModalDesc').innerText = "Select all and copy the backup text below to paste in WhatsApp:";
+    const input = document.getElementById('textBackupInput');
+    input.value = text;
+    input.readOnly = true;
+    document.getElementById('textBackupSubmitBtn').style.display = 'none';
+    document.getElementById('textBackupModal').classList.add('open');
+    setTimeout(() => { input.focus(); input.select(); }, 60);
+  }
+
+  function closeTextBackupModal() {
+    document.getElementById('textBackupModal').classList.remove('open');
+  }
+
+  function submitTextBackupModal() {
+    const raw = document.getElementById('textBackupInput').value.trim();
+    if (!raw) return showToast("Please paste the backup text first.", "warn");
+    closeTextBackupModal();
+    applyBackupPayload(raw);
+  }
+
+  function restoreFromFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => applyBackupPayload(e.target.result);
+    reader.readAsText(file);
+    event.target.value = '';
+  }
+
+  // =========================================================================
+  // 8. INITIAL BOOT
+  // =========================================================================
+  checkPinLockOnBoot();
+  restoreActiveBillDraft();
+  updateCatalogUI();
+  renderBillTableStructure();
+  updateReceiptPreviewOnly();
+  renderHistoryList();
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(err => console.error('SW error:', err));
+  }
+</script>
+</body>
+</html>
